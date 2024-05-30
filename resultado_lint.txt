@@ -1,0 +1,1083 @@
+Validation Summary:
+
+errors          5              
+notices         1              
+warnings        120            
+
+ERRORS:
+
+Code                  Message       Description              File          Line   Column
+JSON_BLOCK_COMMENTS   Your JSON     Only line comments                                  
+                      contains      (comments beginning                                 
+                      block         with "//") are allowed                              
+                      comments.     in JSON files. Please                               
+                                    remove block comments                               
+                                    (comments beginning                                 
+                                    with "/*")                                          
+BANNED_LIBRARY        Banned        Your add-on uses a       base/jquer…                
+                      3rd-party     JavaScript library we    y.min.js                   
+                      JS library    consider unsafe. Read                               
+                                    more:                                               
+                                    https://bit.ly/1TRIyZY                              
+JS_SYNTAX_ERROR       JavaScript    There is a JavaScript    popup.js      1      24    
+                      syntax        syntax error in your                                
+                      error         code, which might be                                
+                      (Parsing as   related to some                                     
+                      module        experimental                                        
+                      error:        JavaScript features                                 
+                      Unexpected    that aren't an                                      
+                      token { at    official part of the                                
+                      line: 1 and   language specification                              
+                      column: 24)   and therefore not                                   
+                      (Parsing as   supported yet. The                                  
+                      script        validation cannot                                   
+                      error:        continue on this file.                              
+                      Unexpected                                                        
+                      token { at                                                        
+                      line: 1 and                                                       
+                      column: 24)                                                       
+JSON_BLOCK_COMMENTS   Your JSON     Only line comments                                  
+                      contains      (comments beginning                                 
+                      block         with "//") are allowed                              
+                      comments.     in JSON files. Please                               
+                                    remove block comments                               
+                                    (comments beginning                                 
+                                    with "/*")                                          
+JS_SYNTAX_ERROR       JavaScript    There is a JavaScript    var/global…   20     6     
+                      syntax        syntax error in your     _test.js                   
+                      error         code, which might be                                
+                      (Parsing as   related to some                                     
+                      module        experimental                                        
+                      error:        JavaScript features                                 
+                      Unexpected    that aren't an                                      
+                      token . at    official part of the                                
+                      line: 20      language specification                              
+                      and column:   and therefore not                                   
+                      6) (Parsing   supported yet. The                                  
+                      as script     validation cannot                                   
+                      error:        continue on this file.                              
+                      Unexpected                                                        
+                      token . at                                                        
+                      line: 20                                                          
+                      and column:                                                       
+                      6)                                                                
+NOTICES:
+
+Code            Message    Description            File          Line   Column
+KNOWN_LIBRARY   Known JS   JavaScript libraries   base/jquer…                
+                library    are discouraged for    y.min.js                   
+                detected   simple add-ons, but                               
+                           are generally                                     
+                           accepted.                                         
+WARNINGS:
+
+Code                    Message       Description              File          Line   Column
+UNSUPPORTED_API         tabs.query    This API has not been    background…   10     1     
+                        is not        implemented by           .js                        
+                        supported     Firefox.                                            
+UNSUPPORTED_API         "tabs.inse…   This API has not been    background…   12     5     
+                        rtCSS" has    implemented by           .js                        
+                        been          Firefox.                                            
+                        removed in                                                        
+                        Manifest                                                          
+                        Version 3                                                         
+                        (`manifest…                                                       
+                        _version`                                                         
+                        property)                                                         
+UNSUPPORTED_API         runtime.on…   This API has not been    background…   15     1     
+                        Message is    implemented by           .js                        
+                        not           Firefox.                                            
+                        supported                                                         
+UNSUPPORTED_API         notificati…   This API has not been    background…   75     2     
+                        ons.create    implemented by           .js                        
+                        is not        Firefox.                                            
+                        supported                                                         
+DANGEROUS_EVAL          eval can be   Evaluation of strings    api.js        81     8     
+                        harmful.      as code can lead to                                 
+                                      security                                            
+                                      vulnerabilities and                                 
+                                      performance issues,                                 
+                                      even in the most                                    
+                                      innocuous of                                        
+                                      circumstances. Please                               
+                                      avoid using `eval` and                              
+                                      the `Function`                                      
+                                      constructor when at                                 
+                                      all possible.                                       
+UNSUPPORTED_API         runtime.ge…   This API has not been    api.js        128    27    
+                        tManifest     implemented by                                      
+                        is not        Firefox.                                            
+                        supported                                                         
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     global.js     193    5     
+                        assignment    and performance                                     
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     global.js     206    5     
+                        assignment    and performance                                     
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSUPPORTED_API         runtime.ge…   This API has not been    ws_clanes.…   69     24    
+                        tURL is not   implemented by           js                         
+                        supported     Firefox.                                            
+UNSUPPORTED_API         runtime.ge…   This API has not been    ws_clanes.…   74     24    
+                        tURL is not   implemented by           js                         
+                        supported     Firefox.                                            
+UNSUPPORTED_API         runtime.ge…   This API has not been    ws_clanes.…   79     24    
+                        tURL is not   implemented by           js                         
+                        supported     Firefox.                                            
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     ws_comerci…   65     3     
+                        assignment    and performance          o.js                       
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     ws_comerci…   70     3     
+                        assignment    and performance          o.js                       
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+STORAGE_SYNC            "storage.s…   This API can cause       ws_ciudad.…   293    1     
+                        ync" can      issues when loaded       js                         
+                        cause         temporarily using                                   
+                        issues when   about:debugging in                                  
+                        loaded        Firefox unless you                                  
+                        temporarily   specify                                             
+                                      "browser_specific_set…                              
+                                      tings.gecko.id" in the                              
+                                      manifest. Please see:                               
+                                      https://mzl.la/2hizK4a                              
+                                      for more.                                           
+UNSUPPORTED_API         runtime.ge…   This API has not been    ws_ciudad.…   454    17    
+                        tURL is not   implemented by           js                         
+                        supported     Firefox.                                            
+UNSUPPORTED_API         runtime.ge…   This API has not been    ws_ciudad.…   456    19    
+                        tURL is not   implemented by           js                         
+                        supported     Firefox.                                            
+UNSUPPORTED_API         runtime.ge…   This API has not been    ws_ciudad.…   465    28    
+                        tURL is not   implemented by           js                         
+                        supported     Firefox.                                            
+UNSUPPORTED_API         runtime.ge…   This API has not been    ws_ciudad.…   472    19    
+                        tURL is not   implemented by           js                         
+                        supported     Firefox.                                            
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     ws_ciudad.…   566    5     
+                        assignment    and performance          js                         
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSUPPORTED_API         runtime.ge…   This API has not been    ws_ciudad.…   603    83    
+                        tURL is not   implemented by           js                         
+                        supported     Firefox.                                            
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     ws_comerci…   70     3     
+                        assignment    and performance          o_jon.js                   
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     ws_comerci…   73     3     
+                        assignment    and performance          o_jon.js                   
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     ws_heroe.js   25     1     
+                        assignment    and performance                                     
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     ws_heroe.js   45     1     
+                        assignment    and performance                                     
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe call   Due to both security     ws_mejoras…   59     3     
+                        to            and performance          .js                        
+                        tablaMejor…   concerns, this may not                              
+                        as.insertA…   be set using dynamic                                
+                        djacentHTML   values which have not                               
+                        for           been adequately                                     
+                        argument 1    sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+STORAGE_SYNC            "storage.s…   This API can cause       ws_mensaje…   5      3     
+                        ync" can      issues when loaded       s.js                       
+                        cause         temporarily using                                   
+                        issues when   about:debugging in                                  
+                        loaded        Firefox unless you                                  
+                        temporarily   specify                                             
+                                      "browser_specific_set…                              
+                                      tings.gecko.id" in the                              
+                                      manifest. Please see:                               
+                                      https://mzl.la/2hizK4a                              
+                                      for more.                                           
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     ws_rutasco…   40     5     
+                        assignment    and performance          merciales.…                
+                        to            concerns, this may not   js                         
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     ws_rutasco…   56     3     
+                        assignment    and performance          merciales.…                
+                        to            concerns, this may not   js                         
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     ws_rutasco…   62     3     
+                        assignment    and performance          merciales.…                
+                        to            concerns, this may not   js                         
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     ws_rutasco…   135    7     
+                        assignment    and performance          merciales.…                
+                        to            concerns, this may not   js                         
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     ws_rutasco…   143    7     
+                        assignment    and performance          merciales.…                
+                        to            concerns, this may not   js                         
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSUPPORTED_API         runtime.ge…   This API has not been    base/util.…   22     16    
+                        tURL is not   implemented by           js                         
+                        supported     Firefox.                                            
+UNSUPPORTED_API         runtime.ge…   This API has not been    ciudad/ciu…   58     111   
+                        tURL is not   implemented by           dad.js                     
+                        supported     Firefox.                                            
+UNSUPPORTED_API         runtime.ge…   This API has not been    ciudad/ciu…   116    23    
+                        tURL is not   implemented by           dad.js                     
+                        supported     Firefox.                                            
+STORAGE_SYNC            "storage.s…   This API can cause       options/op…   2      3     
+                        ync" can      issues when loaded       tions.js                   
+                        cause         temporarily using                                   
+                        issues when   about:debugging in                                  
+                        loaded        Firefox unless you                                  
+                        temporarily   specify                                             
+                                      "browser_specific_set…                              
+                                      tings.gecko.id" in the                              
+                                      manifest. Please see:                               
+                                      https://mzl.la/2hizK4a                              
+                                      for more.                                           
+STORAGE_SYNC            "storage.s…   This API can cause       options/op…   15     2     
+                        ync" can      issues when loaded       tions.js                   
+                        cause         temporarily using                                   
+                        issues when   about:debugging in                                  
+                        loaded        Firefox unless you                                  
+                        temporarily   specify                                             
+                                      "browser_specific_set…                              
+                                      tings.gecko.id" in the                              
+                                      manifest. Please see:                               
+                                      https://mzl.la/2hizK4a                              
+                                      for more.                                           
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/ataque…   100    13    
+                        assignment    and performance          /Resultado                 
+                        to            concerns, this may not   del ataque                 
+                        innerHTML     be set using dynamic     -                          
+                                      values which have not    Empire-str…                
+                                      been adequately          ike_files/…                
+                                      sanitized. This can      sorttable.…                
+                                      lead to security         js                         
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/ataque…   113    13    
+                        assignment    and performance          /Resultado                 
+                        to            concerns, this may not   del ataque                 
+                        innerHTML     be set using dynamic     -                          
+                                      values which have not    Empire-str…                
+                                      been adequately          ike_files/…                
+                                      sanitized. This can      sorttable.…                
+                                      lead to security         js                         
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/ataque…   134    11    
+                        assignment    and performance          /Resultado                 
+                        to            concerns, this may not   del ataque                 
+                        innerHTML     be set using dynamic     -                          
+                                      values which have not    Empire-str…                
+                                      been adequately          ike_files/…                
+                                      sanitized. This can      sorttable.…                
+                                      lead to security         js                         
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSUPPORTED_API         runtime.ge…   This API has not been    var/carita…   52     26    
+                        tURL is not   implemented by           Ciudad.js                  
+                        supported     Firefox.                                            
+UNSUPPORTED_API         runtime.ge…   This API has not been    var/carita…   117    17    
+                        tURL is not   implemented by           Ciudad.js                  
+                        supported     Firefox.                                            
+UNSUPPORTED_API         runtime.ge…   This API has not been    var/carita…   12     30    
+                        tURL is not   implemented by           Global.js                  
+                        supported     Firefox.                                            
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/carita…   37     5     
+                        assignment    and performance          Global.js                  
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/carita…   53     5     
+                        assignment    and performance          Global.js                  
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/carita…   69     5     
+                        assignment    and performance          Global.js                  
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSUPPORTED_API         runtime.ge…   This API has not been    var/carita…   165    31    
+                        tManifest     implemented by           Global.js                  
+                        is not        Firefox.                                            
+                        supported                                                         
+UNSUPPORTED_API         runtime.ge…   This API has not been    var/ciudad…   57     111   
+                        tURL is not   implemented by           Old.js                     
+                        supported     Firefox.                                            
+UNSUPPORTED_API         runtime.ge…   This API has not been    var/ciudad…   115    23    
+                        tURL is not   implemented by           Old.js                     
+                        supported     Firefox.                                            
+INLINE_SCRIPT           Inline        Default CSP rules        var/ataque…                
+                        scripts       prevent inline           2.html                     
+                        blocked by    JavaScript from                                     
+                        default       running                                             
+                                      (https://mzl.la/2pn32…                              
+                                      nd).                                                
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/global…   63     3     
+                        assignment    and performance          _tocado_to…                
+                        to            concerns, this may not   do.js                      
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/global…   112    5     
+                        assignment    and performance          _tocado_to…                
+                        to            concerns, this may not   do.js                      
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/global…   125    5     
+                        assignment    and performance          _tocado_to…                
+                        to            concerns, this may not   do.js                      
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/global…   141    5     
+                        assignment    and performance          _tocado_to…                
+                        to            concerns, this may not   do.js                      
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSUPPORTED_API         runtime.ge…   This API has not been    var/global…   253    31    
+                        tManifest     implemented by           _tocado_to…                
+                        is not        Firefox.                 do.js                      
+                        supported                                                         
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/sortab…   100    13    
+                        assignment    and performance          leRutasPHP…                
+                        to            concerns, this may not   Juego.js                   
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/sortab…   113    13    
+                        assignment    and performance          leRutasPHP…                
+                        to            concerns, this may not   Juego.js                   
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/sortab…   134    11    
+                        assignment    and performance          leRutasPHP…                
+                        to            concerns, this may not   Juego.js                   
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     ciudad/inf…   115    3     
+                        assignment    and performance          raestructu…                
+                        to            concerns, this may not   ra/funcion…                
+                        innerHTML     be set using dynamic     es.js                      
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+STORAGE_SYNC            "storage.s…   This API can cause       var/ws_cit…   293    1     
+                        ync" can      issues when loaded       y_viejo_no…                
+                        cause         temporarily using        _usasr.js                  
+                        issues when   about:debugging in                                  
+                        loaded        Firefox unless you                                  
+                        temporarily   specify                                             
+                                      "browser_specific_set…                              
+                                      tings.gecko.id" in the                              
+                                      manifest. Please see:                               
+                                      https://mzl.la/2hizK4a                              
+                                      for more.                                           
+UNSUPPORTED_API         runtime.ge…   This API has not been    var/ws_cit…   457    17    
+                        tURL is not   implemented by           y_viejo_no…                
+                        supported     Firefox.                 _usasr.js                  
+UNSUPPORTED_API         runtime.ge…   This API has not been    var/ws_cit…   459    19    
+                        tURL is not   implemented by           y_viejo_no…                
+                        supported     Firefox.                 _usasr.js                  
+UNSUPPORTED_API         runtime.ge…   This API has not been    var/ws_cit…   468    28    
+                        tURL is not   implemented by           y_viejo_no…                
+                        supported     Firefox.                 _usasr.js                  
+UNSUPPORTED_API         runtime.ge…   This API has not been    var/ws_cit…   475    19    
+                        tURL is not   implemented by           y_viejo_no…                
+                        supported     Firefox.                 _usasr.js                  
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/ws_cit…   569    5     
+                        assignment    and performance          y_viejo_no…                
+                        to            concerns, this may not   _usasr.js                  
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSUPPORTED_API         runtime.ge…   This API has not been    var/ws_cit…   606    83    
+                        tURL is not   implemented by           y_viejo_no…                
+                        supported     Firefox.                 _usasr.js                  
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/ataque…   2      5816  
+                        assignment    and performance          /Resultado                 
+                        to            concerns, this may not   del ataque                 
+                        outerHTML     be set using dynamic     -                          
+                                      values which have not    Empire-str…                
+                                      been adequately          ike_files/…                
+                                      sanitized. This can      game-empir…                
+                                      lead to security         e-strike.c…                
+                                      issues or fairly         om.min.js                  
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/ataque…   2      5901  
+                        assignment    and performance          /Resultado                 
+                        to            concerns, this may not   del ataque                 
+                        innerHTML     be set using dynamic     -                          
+                                      values which have not    Empire-str…                
+                                      been adequately          ike_files/…                
+                                      sanitized. This can      game-empir…                
+                                      lead to security         e-strike.c…                
+                                      issues or fairly         om.min.js                  
+                                      serious performance                                 
+                                      degradation.                                        
+DANGEROUS_EVAL          The           Evaluation of strings    var/ataque…   2      17888 
+                        Function      as code can lead to      /Resultado                 
+                        constructor   security                 del ataque                 
+                        is eval.      vulnerabilities and      -                          
+                                      performance issues,      Empire-str…                
+                                      even in the most         ike_files/…                
+                                      innocuous of             game-empir…                
+                                      circumstances. Please    e-strike.c…                
+                                      avoid using `eval` and   om.min.js                  
+                                      the `Function`                                      
+                                      constructor when at                                 
+                                      all possible.                                       
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/ataque…   2      55205 
+                        assignment    and performance          /Resultado                 
+                        to            concerns, this may not   del ataque                 
+                        innerHTML     be set using dynamic     -                          
+                                      values which have not    Empire-str…                
+                                      been adequately          ike_files/…                
+                                      sanitized. This can      game-empir…                
+                                      lead to security         e-strike.c…                
+                                      issues or fairly         om.min.js                  
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/ataque…   2      71390 
+                        assignment    and performance          /Resultado                 
+                        to            concerns, this may not   del ataque                 
+                        innerHTML     be set using dynamic     -                          
+                                      values which have not    Empire-str…                
+                                      been adequately          ike_files/…                
+                                      sanitized. This can      game-empir…                
+                                      lead to security         e-strike.c…                
+                                      issues or fairly         om.min.js                  
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/ataque…   2      73115 
+                        assignment    and performance          /Resultado                 
+                        to            concerns, this may not   del ataque                 
+                        innerHTML     be set using dynamic     -                          
+                                      values which have not    Empire-str…                
+                                      been adequately          ike_files/…                
+                                      sanitized. This can      game-empir…                
+                                      lead to security         e-strike.c…                
+                                      issues or fairly         om.min.js                  
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/ataque…   2      73775 
+                        assignment    and performance          /Resultado                 
+                        to            concerns, this may not   del ataque                 
+                        innerHTML     be set using dynamic     -                          
+                                      values which have not    Empire-str…                
+                                      been adequately          ike_files/…                
+                                      sanitized. This can      game-empir…                
+                                      lead to security         e-strike.c…                
+                                      issues or fairly         om.min.js                  
+                                      serious performance                                 
+                                      degradation.                                        
+INLINE_SCRIPT           Inline        Default CSP rules        var/Result…                
+                        scripts       prevent inline           ado del                    
+                        blocked by    JavaScript from          ataque -                   
+                        default       running                  Empire-str…                
+                                      (https://mzl.la/2pn32…   ike.com.ht…                
+                                      nd).                     ml                         
+INLINE_SCRIPT           Inline        Default CSP rules        var/Result…                
+                        scripts       prevent inline           ado del                    
+                        blocked by    JavaScript from          ataque -                   
+                        default       running                  Empire-str…                
+                                      (https://mzl.la/2pn32…   ike.com.ht…                
+                                      nd).                     ml                         
+INLINE_SCRIPT           Inline        Default CSP rules        var/Result…                
+                        scripts       prevent inline           ado del                    
+                        blocked by    JavaScript from          ataque -                   
+                        default       running                  Empire-str…                
+                                      (https://mzl.la/2pn32…   ike.com.ht…                
+                                      nd).                     ml                         
+INLINE_SCRIPT           Inline        Default CSP rules        var/Result…                
+                        scripts       prevent inline           ado del                    
+                        blocked by    JavaScript from          ataque -                   
+                        default       running                  Empire-str…                
+                                      (https://mzl.la/2pn32…   ike.com.ht…                
+                                      nd).                     ml                         
+INLINE_SCRIPT           Inline        Default CSP rules        var/Result…                
+                        scripts       prevent inline           ado del                    
+                        blocked by    JavaScript from          ataque -                   
+                        default       running                  Empire-str…                
+                                      (https://mzl.la/2pn32…   ike.com.ht…                
+                                      nd).                     ml                         
+INLINE_SCRIPT           Inline        Default CSP rules        var/Result…                
+                        scripts       prevent inline           ado del                    
+                        blocked by    JavaScript from          ataque -                   
+                        default       running                  Empire-str…                
+                                      (https://mzl.la/2pn32…   ike.com.ht…                
+                                      nd).                     ml                         
+INLINE_SCRIPT           Inline        Default CSP rules        var/Result…                
+                        scripts       prevent inline           ado del                    
+                        blocked by    JavaScript from          ataque -                   
+                        default       running                  Empire-str…                
+                                      (https://mzl.la/2pn32…   ike.com.ht…                
+                                      nd).                     ml                         
+INLINE_SCRIPT           Inline        Default CSP rules        var/Result…                
+                        scripts       prevent inline           ado del                    
+                        blocked by    JavaScript from          ataque -                   
+                        default       running                  Empire-str…                
+                                      (https://mzl.la/2pn32…   ike.com.ht…                
+                                      nd).                     ml                         
+INLINE_SCRIPT           Inline        Default CSP rules        var/Result…                
+                        scripts       prevent inline           ado del                    
+                        blocked by    JavaScript from          ataque -                   
+                        default       running                  Empire-str…                
+                                      (https://mzl.la/2pn32…   ike.com.ht…                
+                                      nd).                     ml                         
+INLINE_SCRIPT           Inline        Default CSP rules        var/Result…                
+                        scripts       prevent inline           ado del                    
+                        blocked by    JavaScript from          ataque -                   
+                        default       running                  Empire-str…                
+                                      (https://mzl.la/2pn32…   ike.com.ht…                
+                                      nd).                     ml                         
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/Result…   100    13    
+                        assignment    and performance          ado del                    
+                        to            concerns, this may not   ataque -                   
+                        innerHTML     be set using dynamic     Empire-str…                
+                                      values which have not    ike.com_fi…                
+                                      been adequately          les/sortta…                
+                                      sanitized. This can      ble.js                     
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/Result…   113    13    
+                        assignment    and performance          ado del                    
+                        to            concerns, this may not   ataque -                   
+                        innerHTML     be set using dynamic     Empire-str…                
+                                      values which have not    ike.com_fi…                
+                                      been adequately          les/sortta…                
+                                      sanitized. This can      ble.js                     
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/Result…   134    11    
+                        assignment    and performance          ado del                    
+                        to            concerns, this may not   ataque -                   
+                        innerHTML     be set using dynamic     Empire-str…                
+                                      values which have not    ike.com_fi…                
+                                      been adequately          les/sortta…                
+                                      sanitized. This can      ble.js                     
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/ataque…   60     227   
+                        assignment    and performance          /Resultado                 
+                        to            concerns, this may not   del ataque                 
+                        innerHTML     be set using dynamic     -                          
+                                      values which have not    Empire-str…                
+                                      been adequately          ike_files/…                
+                                      sanitized. This can      gtm.js                     
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/jquery…   491    18    
+                        assignment    and performance          .NOTmin.js                 
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/jquery…   1828   138   
+                        assignment    and performance          .NOTmin.js                 
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/jquery…   2323   29    
+                        assignment    and performance          .NOTmin.js                 
+                        to            concerns, this may not                              
+                        outerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/jquery…   2323   113   
+                        assignment    and performance          .NOTmin.js                 
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/jquery…   2374   104   
+                        assignment    and performance          .NOTmin.js                 
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/jquery…   2464   103   
+                        assignment    and performance          .NOTmin.js                 
+                        to            concerns, this may not                              
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+DANGEROUS_EVAL          The           Evaluation of strings    var/jquery…   3531   9     
+                        Function      as code can lead to      .NOTmin.js                 
+                        constructor   security                                            
+                        is eval.      vulnerabilities and                                 
+                                      performance issues,                                 
+                                      even in the most                                    
+                                      innocuous of                                        
+                                      circumstances. Please                               
+                                      avoid using `eval` and                              
+                                      the `Function`                                      
+                                      constructor when at                                 
+                                      all possible.                                       
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/jquery…   491    18    
+                        assignment    and performance          Unminified…                
+                        to            concerns, this may not   .js                        
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/jquery…   1828   138   
+                        assignment    and performance          Unminified…                
+                        to            concerns, this may not   .js                        
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/jquery…   2323   29    
+                        assignment    and performance          Unminified…                
+                        to            concerns, this may not   .js                        
+                        outerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/jquery…   2323   113   
+                        assignment    and performance          Unminified…                
+                        to            concerns, this may not   .js                        
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/jquery…   2374   104   
+                        assignment    and performance          Unminified…                
+                        to            concerns, this may not   .js                        
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/jquery…   2464   103   
+                        assignment    and performance          Unminified…                
+                        to            concerns, this may not   .js                        
+                        innerHTML     be set using dynamic                                
+                                      values which have not                               
+                                      been adequately                                     
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+DANGEROUS_EVAL          The           Evaluation of strings    var/jquery…   3531   9     
+                        Function      as code can lead to      Unminified…                
+                        constructor   security                 .js                        
+                        is eval.      vulnerabilities and                                 
+                                      performance issues,                                 
+                                      even in the most                                    
+                                      innocuous of                                        
+                                      circumstances. Please                               
+                                      avoid using `eval` and                              
+                                      the `Function`                                      
+                                      constructor when at                                 
+                                      all possible.                                       
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/Result…   2      5816  
+                        assignment    and performance          ado del                    
+                        to            concerns, this may not   ataque -                   
+                        outerHTML     be set using dynamic     Empire-str…                
+                                      values which have not    ike.com_fi…                
+                                      been adequately          les/game-e…                
+                                      sanitized. This can      mpire-stri…                
+                                      lead to security         ke.com.min…                
+                                      issues or fairly         .js                        
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/Result…   2      5901  
+                        assignment    and performance          ado del                    
+                        to            concerns, this may not   ataque -                   
+                        innerHTML     be set using dynamic     Empire-str…                
+                                      values which have not    ike.com_fi…                
+                                      been adequately          les/game-e…                
+                                      sanitized. This can      mpire-stri…                
+                                      lead to security         ke.com.min…                
+                                      issues or fairly         .js                        
+                                      serious performance                                 
+                                      degradation.                                        
+DANGEROUS_EVAL          The           Evaluation of strings    var/Result…   2      17888 
+                        Function      as code can lead to      ado del                    
+                        constructor   security                 ataque -                   
+                        is eval.      vulnerabilities and      Empire-str…                
+                                      performance issues,      ike.com_fi…                
+                                      even in the most         les/game-e…                
+                                      innocuous of             mpire-stri…                
+                                      circumstances. Please    ke.com.min…                
+                                      avoid using `eval` and   .js                        
+                                      the `Function`                                      
+                                      constructor when at                                 
+                                      all possible.                                       
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/Result…   2      55205 
+                        assignment    and performance          ado del                    
+                        to            concerns, this may not   ataque -                   
+                        innerHTML     be set using dynamic     Empire-str…                
+                                      values which have not    ike.com_fi…                
+                                      been adequately          les/game-e…                
+                                      sanitized. This can      mpire-stri…                
+                                      lead to security         ke.com.min…                
+                                      issues or fairly         .js                        
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/Result…   2      71390 
+                        assignment    and performance          ado del                    
+                        to            concerns, this may not   ataque -                   
+                        innerHTML     be set using dynamic     Empire-str…                
+                                      values which have not    ike.com_fi…                
+                                      been adequately          les/game-e…                
+                                      sanitized. This can      mpire-stri…                
+                                      lead to security         ke.com.min…                
+                                      issues or fairly         .js                        
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/Result…   2      73115 
+                        assignment    and performance          ado del                    
+                        to            concerns, this may not   ataque -                   
+                        innerHTML     be set using dynamic     Empire-str…                
+                                      values which have not    ike.com_fi…                
+                                      been adequately          les/game-e…                
+                                      sanitized. This can      mpire-stri…                
+                                      lead to security         ke.com.min…                
+                                      issues or fairly         .js                        
+                                      serious performance                                 
+                                      degradation.                                        
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/Result…   2      73775 
+                        assignment    and performance          ado del                    
+                        to            concerns, this may not   ataque -                   
+                        innerHTML     be set using dynamic     Empire-str…                
+                                      values which have not    ike.com_fi…                
+                                      been adequately          les/game-e…                
+                                      sanitized. This can      mpire-stri…                
+                                      lead to security         ke.com.min…                
+                                      issues or fairly         .js                        
+                                      serious performance                                 
+                                      degradation.                                        
+INLINE_SCRIPT           Inline        Default CSP rules        var/ataque…                
+                        scripts       prevent inline           /Resultado                 
+                        blocked by    JavaScript from          del ataque                 
+                        default       running                  -                          
+                                      (https://mzl.la/2pn32…   Empire-str…                
+                                      nd).                     ike.html                   
+INLINE_SCRIPT           Inline        Default CSP rules        var/ataque…                
+                        scripts       prevent inline           /Resultado                 
+                        blocked by    JavaScript from          del ataque                 
+                        default       running                  -                          
+                                      (https://mzl.la/2pn32…   Empire-str…                
+                                      nd).                     ike.html                   
+INLINE_SCRIPT           Inline        Default CSP rules        var/ataque…                
+                        scripts       prevent inline           /Resultado                 
+                        blocked by    JavaScript from          del ataque                 
+                        default       running                  -                          
+                                      (https://mzl.la/2pn32…   Empire-str…                
+                                      nd).                     ike.html                   
+INLINE_SCRIPT           Inline        Default CSP rules        var/ataque…                
+                        scripts       prevent inline           /Resultado                 
+                        blocked by    JavaScript from          del ataque                 
+                        default       running                  -                          
+                                      (https://mzl.la/2pn32…   Empire-str…                
+                                      nd).                     ike.html                   
+INLINE_SCRIPT           Inline        Default CSP rules        var/ataque…                
+                        scripts       prevent inline           /Resultado                 
+                        blocked by    JavaScript from          del ataque                 
+                        default       running                  -                          
+                                      (https://mzl.la/2pn32…   Empire-str…                
+                                      nd).                     ike.html                   
+INLINE_SCRIPT           Inline        Default CSP rules        var/ataque…                
+                        scripts       prevent inline           /Resultado                 
+                        blocked by    JavaScript from          del ataque                 
+                        default       running                  -                          
+                                      (https://mzl.la/2pn32…   Empire-str…                
+                                      nd).                     ike.html                   
+INLINE_SCRIPT           Inline        Default CSP rules        var/ataque…                
+                        scripts       prevent inline           /Resultado                 
+                        blocked by    JavaScript from          del ataque                 
+                        default       running                  -                          
+                                      (https://mzl.la/2pn32…   Empire-str…                
+                                      nd).                     ike.html                   
+INLINE_SCRIPT           Inline        Default CSP rules        var/ataque…                
+                        scripts       prevent inline           /Resultado                 
+                        blocked by    JavaScript from          del ataque                 
+                        default       running                  -                          
+                                      (https://mzl.la/2pn32…   Empire-str…                
+                                      nd).                     ike.html                   
+INLINE_SCRIPT           Inline        Default CSP rules        var/ataque…                
+                        scripts       prevent inline           /Resultado                 
+                        blocked by    JavaScript from          del ataque                 
+                        default       running                  -                          
+                                      (https://mzl.la/2pn32…   Empire-str…                
+                                      nd).                     ike.html                   
+INLINE_SCRIPT           Inline        Default CSP rules        var/ataque…                
+                        scripts       prevent inline           /Resultado                 
+                        blocked by    JavaScript from          del ataque                 
+                        default       running                  -                          
+                                      (https://mzl.la/2pn32…   Empire-str…                
+                                      nd).                     ike.html                   
+UNSAFE_VAR_ASSIGNMENT   Unsafe        Due to both security     var/Result…   60     227   
+                        assignment    and performance          ado del                    
+                        to            concerns, this may not   ataque -                   
+                        innerHTML     be set using dynamic     Empire-str…                
+                                      values which have not    ike.com_fi…                
+                                      been adequately          les/gtm.js                 
+                                      sanitized. This can                                 
+                                      lead to security                                    
+                                      issues or fairly                                    
+                                      serious performance                                 
+                                      degradation.                                        
+DANGEROUS_EVAL          The           Evaluation of strings    var/Result…   25     12473 
+                        Function      as code can lead to      ado del                    
+                        constructor   security                 ataque -                   
+                        is eval.      vulnerabilities and      Empire-str…                
+                                      performance issues,      ike.com_fi…                
+                                      even in the most         les/fbeven…                
+                                      innocuous of             ts.js                      
+                                      circumstances. Please                               
+                                      avoid using `eval` and                              
+                                      the `Function`                                      
+                                      constructor when at                                 
+                                      all possible.                                       
+DANGEROUS_EVAL          The           Evaluation of strings    var/ataque…   25     12473 
+                        Function      as code can lead to      /Resultado                 
+                        constructor   security                 del ataque                 
+                        is eval.      vulnerabilities and      -                          
+                                      performance issues,      Empire-str…                
+                                      even in the most         ike_files/…                
+                                      innocuous of             fbevents.js                
+                                      circumstances. Please                               
+                                      avoid using `eval` and                              
+                                      the `Function`                                      
+                                      constructor when at                                 
+                                      all possible.                                       

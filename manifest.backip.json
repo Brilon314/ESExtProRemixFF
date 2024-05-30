@@ -1,0 +1,406 @@
+/*{
+  "manifest_version": 2,
+  "name": "ESExtPRO 2024 Remix FF",
+  "version": "0.13.10.23",
+  "description": "Continuando un largo legado. Y agregando al juego lo que ya debería tener.",
+  "icons": {
+    "128": "base/icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "base/setvalueedif.js",
+    "base/ayuda.js",
+    "tuimperio/estilosEspeciales.css",
+    "base/moveIcon.png",
+    "base/list.png",
+    "base/house.png",
+    "base/hero.png",
+    "base/puzzle.png",
+    "base/estrella-verde.png",
+    "base/estrella-lila.png",
+    "base/estrella-blanca.png",
+    "base/estrella-azul.png"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.empire-strike.com/*"],
+      "js": [
+        "base/jquery.min.js",
+        "base/util.js",
+        "global.js",
+        "localstorage.js",
+        "base/datos.js",
+        "api.js",
+        "ws_atacar.js",
+        "ws_escogerObjectivo.js",
+        "ws_clanes.js",
+        "ws_clan.js",
+        "ws_informes.js",
+        "ws_ultimosAtaques.js",
+        "ws_comercio.js",
+        "ws_conflictos.js",
+        "ws_ranking.js",
+        "ws_mensajes.js",
+        "ws_gobierno.js",
+        "ws_movertropas.js",
+        "content.js"
+      ]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/ciudad.php?*"],
+      "js": [
+        "global.js",
+        "localstorage.js",
+        "base/datos.js",
+        "content.js",
+        "ciudad/dominio/class_edificio.js",
+        "ciudad/dominio/class_ciudad.js",
+        "ciudad/dominio/class_multiplicador.js",
+        "ciudad/dominio/class_recursos.js",
+        "ciudad/aplicacion/class_estrellas.js",
+        "ciudad/infraestructura/class_elemento_edificios.js",
+        "ciudad/infraestructura/funciones.js",
+        "ciudad/ciudad.js"
+      ]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/mejoras.php"],
+      "js": [
+        "global.js",
+        "localstorage.js",
+        "base/datos.js",
+        "content.js",
+        "ws_mejoras.js"
+      ]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/tuimperio.php"],
+      "js": [
+        "base/jquery.min.js",
+        "global.js",
+        "ws_imperio.js"
+      ]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/quest.php?*"],
+      "js": ["ws_quest.js"]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/canjearfama.php?*"],
+      "js": ["ws_canjearfama.js"]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/rutascomerciales.php"],
+      "js": [
+        "content.js",
+        "ws_rutascomerciales.js"
+      ]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/heroe.php?*"],
+      "js": ["ws_heroe.js"]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/politica.php"],
+      "js": [
+        "content.js",
+        "ws_politica.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "notifications",
+    "storage"
+  ],
+  "browser_action": {
+    "default_name": "Empire Strike",
+    "default_icon": "base/marker.png",
+    "default_popup": "popup.html"
+  },
+  "applications": {
+    "gecko": {
+      "id": "mi-extension@ejemplo.com",
+      "strict_min_version": "45.0"
+    }
+  }
+}*/
+/*{
+  "name": "ESExtPRO 2024 Remix FF",
+  "version": "0.13.10.23",
+  "manifest_version": 2,
+  "description": "Continuando un largo legado. Y agregando al juego lo que ya debería tener.",
+  "icons": {
+    "128": "base/icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "base/setvalueedif.js",
+    "base/ayuda.js",
+    "tuimperio/estilosEspeciales.css",
+    "base/moveIcon.png",
+    "base/list.png",
+    "base/house.png",
+    "base/hero.png",
+    "base/puzzle.png",
+    "base/estrella-verde.png",
+    "base/estrella-lila.png",
+    "base/estrella-blanca.png",
+    "base/estrella-azul.png"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.empire-strike.com/*"],
+      "js": [
+        "base/jquery.min.js",
+        "base/util.js",
+        "global.js",
+        "localstorage.js",
+        "base/datos.js",
+        "api.js",
+        "ws_atacar.js",
+        "ws_escogerObjectivo.js",
+        "ws_clanes.js",
+        "ws_clan.js",
+        "ws_informes.js",
+        "ws_ultimosAtaques.js",
+        "ws_comercio.js",
+        "ws_conflictos.js",
+        "ws_ranking.js",
+        "ws_mensajes.js",
+        "ws_gobierno.js",
+        "ws_movertropas.js",
+        "content.js"
+      ]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/ciudad.php?*"],
+      "js": [
+        "global.js",
+        "localstorage.js",
+        "base/datos.js",
+        "content.js",
+        "ciudad/dominio/class_edificio.js",
+        "ciudad/dominio/class_ciudad.js",
+        "ciudad/dominio/class_multiplicador.js",
+        "ciudad/dominio/class_recursos.js",
+        "ciudad/aplicacion/class_estrellas.js",
+        "ciudad/infraestructura/class_elemento_edificios.js",
+        "ciudad/infraestructura/funciones.js",
+        "ciudad/ciudad.js"
+      ]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/mejoras.php"],
+      "js": [
+        "global.js",
+        "localstorage.js",
+        "base/datos.js",
+        "content.js",
+        "ws_mejoras.js"
+      ]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/tuimperio.php"],
+      "js": [
+        "base/jquery.min.js",
+        "global.js",
+        "ws_imperio.js"
+      ]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/quest.php?*"],
+      "js": ["ws_quest.js"]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/canjearfama.php?*"],
+      "js": ["ws_canjearfama.js"]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/rutascomerciales.php"],
+      "js": [
+        "content.js",
+        "ws_rutascomerciales.js"
+      ]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/heroe.php?*"],
+      "js": ["ws_heroe.js"]
+    },
+    {
+      "matches": ["https://www.empire-strike.com/politica.php"],
+      "js": [
+        "content.js",
+        "ws_politica.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "notifications",
+    "storage"
+  ],
+  "browser_action": {
+    "default_name": "Empire Strike",
+    "default_icon": "base/marker.png",
+    "default_popup": "popup.html"
+  }
+}*/
+/*{
+  "name": "ESExtPRO 2024 Remix FF",
+  "version": "0.13.10.23",
+  "manifest_version": 2,
+  "description": "Continuando un largo legado. Y agregando al juego lo que ya debería tener.",
+  "icons": {
+    "128": "base/icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "base/setvalueedif.js",
+    "base/ayuda.js",
+    "tuimperio/estilosEspeciales.css",
+    "base/moveIcon.png",
+    "base/list.png",
+    "base/house.png",
+    "base/hero.png",
+    "base/puzzle.png",
+    "base/estrella-verde.png",
+    "base/estrella-lila.png",
+    "base/estrella-blanca.png",
+    "base/estrella-azul.png"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.empire-strike.com/*"
+      ],
+      "js": [
+        "base/jquery.min.js",
+        "base/util.js",
+        "global.js",
+        "localstorage.js",
+        "base/datos.js",
+        "api.js",
+        "ws_atacar.js",
+        "ws_escogerObjectivo.js",
+        "ws_clanes.js",
+        "ws_clan.js",
+        "ws_informes.js",
+        "ws_ultimosAtaques.js",
+        "ws_comercio.js",
+        "ws_conflictos.js",
+        "ws_ranking.js",
+        "ws_mensajes.js",
+        "ws_gobierno.js",
+        "ws_movertropas.js",
+        "content.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.empire-strike.com/ciudad.php?*"
+      ],
+      "js": [
+        "global.js",
+        "localstorage.js",
+        "base/datos.js",
+        "content.js",
+        "ciudad/dominio/class_edificio.js",
+        "ciudad/dominio/class_ciudad.js",
+        "ciudad/dominio/class_multiplicador.js",
+        "ciudad/dominio/class_recursos.js",
+        "ciudad/aplicacion/class_estrellas.js",
+        "ciudad/infraestructura/class_elemento_edificios.js",
+        "ciudad/infraestructura/funciones.js",
+        "ciudad/ciudad.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.empire-strike.com/mejoras.php"
+      ],
+      "js": [
+        "global.js",
+        "localstorage.js",
+        "base/datos.js",
+        "content.js",
+        "ws_mejoras.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.empire-strike.com/tuimperio.php"
+      ],
+      "js": [
+        "base/jquery.min.js",
+        "global.js",
+        "ws_imperio.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.empire-strike.com/quest.php?*"
+      ],
+      "js": [
+        "ws_quest.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.empire-strike.com/canjearfama.php?*"
+      ],
+      "js": [
+        "ws_canjearfama.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.empire-strike.com/rutascomerciales.php"
+      ],
+      "js": [
+        "content.js",
+        "ws_rutascomerciales.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.empire-strike.com/heroe.php?*"
+      ],
+      "js": [
+        "ws_heroe.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.empire-strike.com/politica.php"
+      ],
+      "js": [
+        "content.js",
+        "ws_politica.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "notifications",
+    "storage"
+  ],
+  "browser_action": {
+    "default_name": "Empire Strike",
+    "default_icon": "base/marker.png",
+    "default_popup": "popup.html"
+  }
+}
+*/
